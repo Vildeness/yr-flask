@@ -14,23 +14,37 @@ def index():
     return  render_template("index.html", sted=sted, tempratur=tempratur)
 
 @app.route("/trondheim")
-def index_trondheim():
+def trondheim():
     tempratur = hent_temp()
     print(f"Tempratur: {tempratur}")
     sted = "Trondheim"
     return render_template("index.html", sted=sted, tempratur=tempratur)
 
 @app.route("/")
-def index():
+def kristiansand():
     tempratur = hent_temp()
     print(f"Tempratur: {tempratur}")
     sted = "kristiasand"
     return render_template("index.html", sted=sted, tempratur=tempratur)
 
 @app.route("/")
-def index():
+def bergen():
     tempratur = hent_temp()
     print(f"Tempratur: {tempratur}")
     sted = "Bergen"
+    return render_template("index.html", sted=sted, tempratur=tempratur)
+
+@app.route("/")
+def tromsø():
+    tempratur = hent_temp()
+    print(f"Tempratur: {tempratur}")
+    sted = "tromsø"
+    return render_template("index.html", sted=sted, tempratur=tempratur)
+
+@app.route("/")
+def stavanger():
+    tempratur = hent_temp()
+    print(f"Tempratur: {tempratur}")
+    sted = "stavanger"
     return render_template("index.html", sted=sted, tempratur=tempratur)
 
